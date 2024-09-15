@@ -1,0 +1,105 @@
+[gd_scene load_steps=7 format=3 uid="uid://dpavqppit1ejv"]
+
+[ext_resource type="PackedScene" uid="uid://c7txxcslti2mb" path="res://player.tscn" id="1_j3xtj"]
+[ext_resource type="PackedScene" uid="uid://yfwnk4tjxjtn" path="res://RandomColoredBox.tscn" id="3_0cqry"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xcp2x"]
+size = Vector3(10, 0.5, 300)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hltlj"]
+size = Vector3(10, 0.5, 300)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ruqgn"]
+size = Vector3(5, 3, 0.05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rlnm8"]
+size = Vector3(5, 3, 0.05)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_j3xtj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004, 1.978, 100)
+Speed = 100.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_xcp2x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_hltlj")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 100, 0)
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="RigidBody3D" parent="Node3D" instance=ExtResource("3_0cqry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, -145)
+mass = 0.006
+
+[node name="RigidBody3D2" parent="Node3D" instance=ExtResource("3_0cqry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.75, -145)
+mass = 0.006
+
+[node name="RigidBody3D4" parent="Node3D" instance=ExtResource("3_0cqry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.75, -145)
+mass = 0.006
+
+[node name="RigidBody3D3" parent="Node3D" instance=ExtResource("3_0cqry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.75, -145)
+mass = 0.006
+
+[node name="RigidBody3D5" parent="Node3D" instance=ExtResource("3_0cqry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.75, -145)
+mass = 0.006
+
+[node name="RigidBody3D6" parent="Node3D" instance=ExtResource("3_0cqry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, -145)
+mass = 0.006
+
+[node name="RigidBody3D7" parent="Node3D" instance=ExtResource("3_0cqry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.75, -145)
+mass = 0.006
+
+[node name="RigidBody3D8" parent="Node3D" instance=ExtResource("3_0cqry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.75, -145)
+mass = 0.006
+
+[node name="RigidBody3D9" parent="Node3D" instance=ExtResource("3_0cqry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.75, -145)
+mass = 0.006
+
+[node name="RigidBody3D10" parent="Node3D" instance=ExtResource("3_0cqry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.75, -145)
+mass = 0.006
+
+[node name="RigidBody3D11" parent="Node3D" instance=ExtResource("3_0cqry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.75, -145)
+mass = 0.006
+
+[node name="RigidBody3D12" parent="Node3D" instance=ExtResource("3_0cqry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2.75, -145)
+mass = 0.006
+
+[node name="RigidBody3D13" parent="Node3D" instance=ExtResource("3_0cqry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2.75, -145)
+mass = 0.006
+
+[node name="RigidBody3D14" parent="Node3D" instance=ExtResource("3_0cqry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.75, -145)
+mass = 0.006
+
+[node name="RigidBody3D15" parent="Node3D" instance=ExtResource("3_0cqry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2.75, -145)
+mass = 0.006
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0350014, 1.75, -144)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("BoxMesh_ruqgn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_rlnm8")

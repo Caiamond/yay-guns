@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://yfwnk4tjxjtn"]
+
+[ext_resource type="Material" uid="uid://byuyyqr1ma1wr" path="res://Materials/Red.tres" id="1_fcked"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0byru"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_suity"]
+
+[node name="RigidBody3D" type="RigidBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_0byru")
+surface_material_override/0 = ExtResource("1_fcked")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_suity")
