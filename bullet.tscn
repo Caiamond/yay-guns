@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dq54r1qjhwuse"]
+
+[ext_resource type="Script" path="res://Bullet.cs" id="1_qujob"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_87kqi"]
+size = Vector3(0.2, 0.2, 0.4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4px16"]
+albedo_color = Color(0, 1, 0, 1)
+metallic = 0.5
+emission_enabled = true
+emission = Color(0, 1, 0, 1)
+emission_energy_multiplier = 1.95
+
+[sub_resource type="BoxMesh" id="BoxMesh_gaox4"]
+material = SubResource("StandardMaterial3D_4px16")
+size = Vector3(0.2, 0.2, 0.4)
+
+[node name="Bullet" type="RigidBody3D"]
+collision_layer = 2
+collision_mask = 5
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+gravity_scale = 0.0
+script = ExtResource("1_qujob")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_87kqi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_gaox4")
